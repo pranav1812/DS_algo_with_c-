@@ -72,8 +72,16 @@ string inWords(int parts,string number){
 int main(){
     string num;
     getline(cin,num);
-    int parts=countParts(num);
-    string word=inWords(parts,num);
+    int startZeros=0;
+    int i=0;
+    while(num[i]=='0'){
+        i++;
+        startZeros++;
+    }
+    string truncNum=num.substr(startZeros,num.length()-startZeros);
+    int parts=countParts(truncNum);
+    //cout<<truncNum<<endl;
+    string word=inWords(parts,truncNum);
 
     cout<<word<<endl;
 }
