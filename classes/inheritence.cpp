@@ -33,7 +33,4 @@ int main(){
     gaga.show();
     Citizen santa("santa",19,"jdkalcm","woihrjfdc");
     cout<<"details \n"<<santa.name<<endl;
-
-
-
 }
